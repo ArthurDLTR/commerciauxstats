@@ -149,7 +149,7 @@ class CommerciauxStats extends Stats
 	{
 		global $user;
 
-		$sql = "SELECT date_format(datef,'%m') as dm, SUM(c.".$this->field.")";
+		$sql = "SELECT date_format(datef,'%m') as dm, SUM(f.".$this->field.")";
 		$sql .= " FROM ".$this->from;
 		$sql .= $this->join;
 		$sql .= " WHERE f.datef BETWEEN '".$this->db->idate(dol_get_first_day($year))."' AND '".$this->db->idate(dol_get_last_day($year))."'";
